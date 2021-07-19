@@ -387,7 +387,8 @@ if (!function_exists('nova_page_manager_get_page_by_path')) {
                 });
 
             if (isset($locale)) $query->where('locale', $locale);
-            $page = $query->firstOrFail();
+            $page = $query->first();
+            if (empty($page)) return null;
             $parent = $page;
         }
 
