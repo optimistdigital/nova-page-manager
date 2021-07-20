@@ -148,6 +148,7 @@ composer require optimistdigital/nova-drafts
 ### Overriding SEO fields
 
 The default SEO fields can be overridden using the configuration file. The configuration file contains the key `seo_fields` which accepts an array (or a callable which returns an array) of fields.
+If you pass an array, then an error will occur when caching the configuration. Therefore, it is worth using a callable function.
 
 ### Modify page path
 
